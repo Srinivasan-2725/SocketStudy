@@ -54,39 +54,12 @@ Socket programming finds applications in various domains, including web developm
 5.	RPC mechanisms: which allow processes to execute code on a remote server, often use socket programming for communication.
 
 ## SERVER.PY:
-```
-import socket
-s=socket.socket()
-s.connect(('localhost',8000))
-print(s.getsockname())
-print(s.recv(1024).decode())
-s.send("acknowledgement recived from the server".encode())
-```
-## CLIENT.PY:
-```
-import socket
-from datetime import datetime
-s=socket.socket()
-s.bind(('localhost',8000))
-s.listen(5)
-c,addr=s.accept()
-print("Client Address : ",addr)
-now = datetime.now()
-c.send(now.strftime("%d/%m/%Y %H:%M:%S").encode())
-ack=c.recv(1024).decode()
-if ack:
-     print(ack)
-     c.close()
-```
-## OUTPUT:
-client code:
-<img width="660" height="385" alt="Screenshot 2026-05-12 141049" src="https://github.com/user-attachments/assets/94171131-64b1-4071-af16-48fd5be71651" />
-server code:
-<img width="477" height="146" alt="Screenshot 2026-05-12 141101" src="https://github.com/user-attachments/assets/46e9dd45-8a1b-4535-b8ca-1c7a1f3ce9b8" />
-connection terminal: 
-<img width="452" height="127" alt="Screenshot 2026-05-12 141109" src="https://github.com/user-attachments/assets/5934afd3-5f3f-44f4-9621-637c4a4f560f" />
 
-<img width="990" height="207" alt="Screenshot 2026-05-12 141120" src="https://github.com/user-attachments/assets/34ea649a-255e-4876-bee7-a194ae7646fe" />
+<img width="750" height="324" alt="image" src="https://github.com/user-attachments/assets/a0d6f1eb-5195-4999-90da-a33c4e0832d7" />
+
+## CLIENT.PY:
+
+<img width="729" height="467" alt="image" src="https://github.com/user-attachments/assets/65ed7d93-d9c1-4c34-88a3-6d8dbe24cf1b" />
 
 ## Result:
 Thus the study of Socket Programming Completed Successfully
